@@ -29,11 +29,21 @@ class Crawler:
         save_login_button.click()
         sleep(3.5)
         turn_off_notifications_button = navegador.find_element(
-            By.XPATH, "/html/body/div[5]/div/div/div/div[3]/button[2]")
+            By.CSS_SELECTOR, "button.aOOlW:nth-child(2)")
         turn_off_notifications_button.click()
 
+    def click_first_post(self):
+        # class of button to copy link: wp06b
+        navegador = self.navegador
+        first_post = navegador.find_element(
+            By.CSS_SELECTOR, 'article._8Rm4L:nth-child(1) > div:nth-child(2) > button:nth-child(1)')
+        first_post.click()
+        copy_link = navegador.find_element(By.CSS_SELECTOR, "button.aOOlW:nth-child(5)")
+        copy_link.click()
 
-user = getpass.getpass('Enter your Instagram username: ')
-passw = getpass.getpass('Enter your Instagram password: ')
+
+user = getpass.getpass(prompt='Enter your Instagram username: ', stream=None)
+passw = getpass.getpass(prompt='Enter your Instagram password: ', stream=None)
 rick_login = Crawler(user, passw)
 rick_login.join_instagram()
+rick_login.click_first_post()
