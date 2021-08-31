@@ -16,3 +16,18 @@ and take the link of the first post and the note the name of the perfil
 - Selenium as Lib to automation
 ---
 
+
+<h2>Installation</h2>
+---
+<p>To install this repository you <stron>MUST</strong> 
+have the pip command<br/></p>
+<p>If you are in Linux Ubuntu:</p>
+```
+sudo apt-get update
+sudo apt-get install python3-pip
+```
+<p>If you are in Manjaro:</p>
+```
+sudo pacman -Syyu
+sudo pacman -S python3-pip
+```
