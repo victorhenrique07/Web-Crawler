@@ -2,7 +2,7 @@
 
 <p align="center">
 This is a Web Crawler that will login on your Instagram automatically <br/>
-and take the link of the first post and the note the name of the perfil
+and take the link of the first post and the name of the perfil
 </p>
 
 <br/>
